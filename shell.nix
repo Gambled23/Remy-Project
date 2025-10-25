@@ -6,5 +6,6 @@ in pkgs.mkShell rec {
 
   buildInputs = [
     arduino-cli
+    arduino
   ];
 }
