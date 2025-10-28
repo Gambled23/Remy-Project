@@ -16,7 +16,7 @@ void setup() {
 }
 
 void loop() {
-  // Generate new random positions for both servos
+  // // Generate new random positions for both servos
   int random_arm = random(1, 4);
   bool return_to_position = random(0, 2); // Randomly decide whether to return to original position
   int mew_pos1 = random(30, 149);
