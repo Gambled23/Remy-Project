@@ -2,8 +2,8 @@
 Servo srituhobby1;
 Servo srituhobby2;
 
-int pos1 = 90; // initial position for servo 1
-int pos2 = 90; // initial position for servo 2
+int pos1 = 150; // initial position for servo 1
+int pos2 = 150; // initial position for servo 2
 
 void setup() {
   srituhobby1.attach(9);//set arduino PWM pin D9
@@ -16,11 +16,11 @@ void setup() {
 }
 
 void loop() {
-  // // Generate new random positions for both servos
+  // Generate new random positions for both servos
   int random_arm = random(1, 4);
-  bool return_to_position = random(0, 2); // Randomly decide whether to return to original position
   int mew_pos1 = random(30, 149);
   int mew_pos2 = random(30, 149);
+  bool return_to_base = random(0, 2);
 
   switch (random_arm) {
     case 1:
@@ -34,15 +34,16 @@ void loop() {
       srituhobby2.write(mew_pos2);
       break;
   }
-  if (return_to_position == 1) {
-    delay(random(1000, 3000)); 
-    srituhobby1.write(pos1);
-    srituhobby2.write(pos2);
-  }
-  else {
+
+  delay(random(1000, 2500));
+
+  if (return_to_base == 1) {
+    srituhobby1.write(150);
+    srituhobby2.write(150);
+  } else{
     pos1 = mew_pos1;
     pos2 = mew_pos2;
   }
 
-  delay(random(5000, 8000));
+  delay(random(3000, 5000));
 }
