@@ -21,32 +21,32 @@ void setup() {
 
 void loop() {
   // test();
-  int arm = random(1, 4);
-  int move_type = random(1, 4);
+  // int arm = 3;
+  // int move_type = random(1, 4);
   
-  delay(random(2500, 4000));
+  // delay(random(2500, 4000));
 
-  switch (move_type) {
-    case 1: 
-      random_move(arm);
-      break;
-    case 2:
-      wave_arms(arm);
-      break;
-    case 3:
-      lift_arms(arm);
-      break;
-  }
+  // switch (move_type) {
+  //   case 1: 
+  //     random_move(arm);
+  //     break;
+  //   case 2:
+  //     wave_arms(arm);
+  //     break;
+  //   case 3:
+  //     lift_arms(arm);
+  //     break;
+  // }
 }
 
 void test() {
   while (true) {
     srituhobby1.write(130);
     srituhobby2.write(130);
-    delay(2000);
+    delay(3000);
     srituhobby1.write(30);
     srituhobby2.write(30);
-    delay(2000);
+    delay(3000);
   }
 }
 
