@@ -21,22 +21,22 @@ void setup() {
 
 void loop() {
   // test();
-  // int arm = 3;
-  // int move_type = random(1, 4);
+  int arm = random(1, 4); // 1 = left, 2 = right, 3 = both
+  int move_type = random(1, 4);
   
-  // delay(random(2500, 4000));
+  delay(random(2500, 4000));
 
-  // switch (move_type) {
-  //   case 1: 
-  //     random_move(arm);
-  //     break;
-  //   case 2:
-  //     wave_arms(arm);
-  //     break;
-  //   case 3:
-  //     lift_arms(arm);
-  //     break;
-  // }
+  switch (move_type) {
+    case 1: 
+      random_move(arm);
+      break;
+    case 2:
+      wave_arms(arm);
+      break;
+    case 3:
+      lift_arms(arm);
+      break;
+  }
 }
 
 void test() {
